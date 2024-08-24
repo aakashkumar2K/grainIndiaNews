@@ -1,0 +1,127 @@
+.innerBox {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    height:auto;
+    text-align: left;
+}
+.h2{
+color:blue;
+padding:3px;
+align-content: center;
+}
+label{
+    display:inline-block;
+    font-size: 20px;
+    padding:2px;
+    margin:5px;
+    align-items: left;
+}
+ button{
+    width:40%;
+    
+    padding:10px;
+    margin:10px;
+    /*
+    font-size: 14px;
+    color:white;
+    background-color:green; */
+        padding: 10px 20px;
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    button:hover {
+        background-color: #c82333;
+        transform: scale(1.05);
+    }
+    
+    button:active {
+        transform: scale(0.95);
+    }
+    
+    
+
+ 
+textarea{
+    
+    width:80%;
+    height:100%;
+}
+input{
+    width:50%;
+    height:30px;
+}
+input[type='file']{
+    padding:10px;
+}
+.error{
+    display:inline-block;
+    background-color: red;
+    width:90%;
+    height:10%;
+    color:white;
+    font-size:larger;
+    margin:5px;
+    padding:10px;
+
+
+}
+.success{
+    display:inline-block;
+    background-color:green;
+    width:40%;
+    height:10%;
+    color:white;
+    font-size:larger;
+    margin:5px;
+    padding:10px;
+
+
+}
+.btn-success:hover{
+    background-color:green;
+        transform: scale(1.05);
+}
+.error, .success {
+    opacity: 1;
+    transition: opacity 1s ease-out; /* 2-second fade-out */
+}
+
+.fade-out {
+    opacity: 0;
+}
+.btn-success{
+    background-color:green;
+}
+.btn-copy{
+    display: inline-block;
+    width:35%;
+    
+   
+    margin:10px;
+    
+    font-size: 14px;
+    color:white;
+   
+        padding: 10px 20px;
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.2s ease
+}
+.btn-copy:hover{
+    
+        transform: scale(1.05);
+}

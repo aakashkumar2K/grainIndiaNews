@@ -1,0 +1,107 @@
+/* Container for the edit form */
+.innerBox {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading style */
+.innerBox h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input and textarea styles */
+.innerBox input[type="text"],
+.innerBox textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* File input */
+.innerBox input[type="file"] {
+    margin-bottom: 15px;
+}
+
+/* Preview image styles */
+.preview-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn-copy, .btn-success {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-copy {
+    background-color: #ccc;
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.btn-copy:hover {
+    background-color: #bbb;
+}
+
+.btn-success {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+}
+
+.btn-success:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.btn-success:hover {
+    background-color: #45a049;
+}
+
+/* Error and success message styles */
+.error, .success {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Fade-out effect */
+.fade-out {
+    opacity: 0;
+}

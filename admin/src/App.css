@@ -1,0 +1,134 @@
+/* General App Styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 12px;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #343a40;
+  color: white;
+  width: 150px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transform: translateX(-100%);
+  animation: slideIn 0.5s forwards ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 15px;
+}
+
+.sidebar-links a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-links a:hover {
+  color: #007bff;
+  background-color: #495057;
+  padding-left: 10px;
+  transform: translateX(5px);
+}
+
+.sidebar-links a::before {
+  content: '●'; /* Placeholder for an icon */
+  margin-right: 10px;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+  color: #007bff;
+}
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+  }
+}
+
+/* Content Area Styles */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  animation: slideInContent 0.5s ease-in-out;
+}
+
+@keyframes slideInContent {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      height: calc(100vh - 60px);
+      z-index: 1000;
+      transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+      animation: slideIn 0.5s forwards ease-in-out;
+  }
+
+  .content {
+      padding: 15px;
+  }
+
+  .main-container {
+      flex-direction: column;
+  }
+}
